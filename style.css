@@ -1,0 +1,181 @@
+/*Set the background colors */
+
+header,.intro,footer{
+    background-color: #1f2937;
+}
+
+.quoteSection{
+    background-color: #e5e7eb;
+    font-size:36px;
+    font-style: italic;
+}
+
+.fourPanes{
+    background-color: gray;
+}
+
+
+
+/*-------------------------------------------------------------------*/
+
+
+/*Set left margins of logo, quote text, 1st and last section 
+to make page look pleasing*/
+
+.logo, .introDescription, .signupBanner, .quote{
+    margin-left: 20%;
+}
+
+/*-------------------------------------------------------------------*/
+
+
+/*Set right margins of links, quote text, 1st and last section */
+.links, .introPhoto, .signupBanner, .quote{
+    margin-right: 20%;
+}
+
+/*-------------------------------------------------------------------*/
+
+
+
+/*Start coverting some divs into flex-boxes to arrange content */
+header{
+    
+    display:flex;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+
+.quoteSection{
+    display: flex;
+
+}
+
+/*-------------------------------------------------------------------*/
+
+/* Modify link texts */
+
+a{
+    text-decoration: none;
+    color: #e5e7eb;
+    font-size:18px;
+}
+
+.links{
+    display:flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.intro{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.introPhoto,.introDescription{
+    flex:1;
+}
+
+.introPhoto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.introDescription{
+    padding: 10px;
+}
+.fourPanes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+
+
+
+/*-------------------------------------------------------------------*/
+
+.infoPane{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Info Panes and their Elements
+-Info Button
+-Info Text
+-Info Image
+*/
+
+
+
+/*Info Button Attribute*/
+.infoButton{
+    padding: 80px 40px;
+    border-radius: 12px;
+    border-color: cyan;
+    
+}
+
+/*-------------------------------------------------------------------*/
+
+
+
+
+/*Sign up section (2nd Last)
+-signupBanner
+-signupButton
+*/
+
+.signupBanner{
+    display: flex;
+    gap: 60px;
+    background-color: cyan;
+    justify-content: center;
+    align-items: center;
+}
+
+.signupButton{
+    color:white;
+    background-color: blue;
+    border-radius: 24px;
+    width: 10%;
+    height: 50%;
+    margin-right:10px;
+    flex-shrink:0;
+    text-wrap: wrap;
+}
+
+
+/*-------------------------------------------------------------------*/
+
+
+
+
+/*Footer attributes*/
+footer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyrightText{
+    color: white;
+    font-weight: 800
+}

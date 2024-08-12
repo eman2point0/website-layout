@@ -1,181 +1,197 @@
-/*Set the background colors */
-
-header,.intro,footer{
-    background-color: #1f2937;
-}
-
-.quoteSection{
-    background-color: #e5e7eb;
-    font-size:36px;
-    font-style: italic;
-}
-
-.fourPanes{
-    background-color: gray;
-}
-
-
-
-/*-------------------------------------------------------------------*/
-
-
-/*Set left margins of logo, quote text, 1st and last section 
-to make page look pleasing*/
-
-.logo, .introDescription, .signupBanner, .quote{
-    margin-left: 20%;
-}
-
-/*-------------------------------------------------------------------*/
-
-
-/*Set right margins of links, quote text, 1st and last section */
-.links, .introPhoto, .signupBanner, .quote{
-    margin-right: 20%;
-}
-
-/*-------------------------------------------------------------------*/
-
-
-
-/*Start coverting some divs into flex-boxes to arrange content */
-header{
-    
-    display:flex;
-    justify-content: space-between;
-    padding: 8px;
-}
 
 body{
+    font-family: "roboto", sans-serif;
+    margin: 0;
+    min-width: 100vw ;
+    overflow-x: hidden;
+}
+
+.body{
+    
     display: flex;
+    flex: 1;
     flex-direction: column;
+}
+/*Hero (the top of the website) and elements
+-Header
+--Logo
+--Links
+-Content-top
+--Content-title
+--Content-paragraph
+--Content-photo
+*/
+
+.hero{
+    background-color: #1f2937;
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    padding:20px;
     
 }
 
-
-
-.quoteSection{
+.header{
+    align-items: center;
     display: flex;
-
+    flex: 1;
+    justify-content: space-between;
 }
 
-/*-------------------------------------------------------------------*/
-
-/* Modify link texts */
-
-a{
-    text-decoration: none;
-    color: #e5e7eb;
-    font-size:18px;
+.logo{
+    margin: auto;
+    padding: 5px;
 }
 
 .links{
-    display:flex;
-    justify-content: space-between;
-    gap: 15px;
-}
-
-.intro{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    
-
-}
-
-.introPhoto,.introDescription{
-    flex:1;
-}
-
-.introPhoto{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.introDescription{
+    margin: auto;
     padding: 10px;
 }
-.fourPanes{
+
+.links ul{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-
-
-
-
-
-/*-------------------------------------------------------------------*/
-
-.infoPane{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/*Info Panes and their Elements
--Info Button
--Info Text
--Info Image
-*/
-
-
-
-/*Info Button Attribute*/
-.infoButton{
-    padding: 80px 40px;
-    border-radius: 12px;
-    border-color: cyan;
     
+    list-style-type: none;
+    gap: 10px;
+    padding: 0px;
+    margin: 0px;
 }
 
-/*-------------------------------------------------------------------*/
+a {
+    color: white;
+    text-decoration: none;
+}
+/* Content Top */
 
-
-
-
-/*Sign up section (2nd Last)
--signupBanner
--signupButton
-*/
-
-.signupBanner{
+.content-top{
     display: flex;
-    gap: 60px;
-    background-color: cyan;
     justify-content: center;
-    align-items: center;
+    gap:20px;
+    padding: 10px;
+    margin: auto;
 }
 
-.signupButton{
-    color:white;
-    background-color: blue;
-    border-radius: 24px;
-    width: 10%;
-    height: 50%;
-    margin-right:10px;
-    flex-shrink:0;
+.top-title{
+    color: white;
+    padding: 5px;
     text-wrap: wrap;
 }
 
-
-/*-------------------------------------------------------------------*/
-
-
-
-
-/*Footer attributes*/
-footer{
-    display:flex;
-    justify-content: center;
-    align-items: center;
+.top-title p,h2{
+    padding: 5px;
+    text-wrap: wrap;
 }
 
-.copyrightText{
+.top-photo{
+    align-items: center;
+    display: flex;
+    object-fit: contain;
+    padding: 5px;
+    flex:1;
+    justify-content: center;
+}
+
+/* Content Mid */
+
+.content-mid{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+.card-container{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    gap:10px;
+}
+
+.card{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+.card-button{
+    display: flex;
+    flex: 1;
+    object-fit: scale-down;
+}
+.card-title{
+    text-align: center;
+}
+/* Content bottom */
+
+.content-bottom{
+    align-items: center;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 20px; 
+    
+}
+
+.signup-background{
+    align-items: center;
+    background-color: lightskyblue;
+    border-radius: 12px;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.signup-promotion{
+    align-items:flex-start;
     color: white;
-    font-weight: 800
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    text-wrap: wrap;
+    
+}
+
+.promotion{
+    font-size: 18px;
+    font-weight: 600;
+    margin: auto;
+    padding: 5px;
+}
+
+.promotion-description{
+    font-size: 14px;
+    font-weight: 500;
+    margin: auto;
+    padding: 10px;
+}
+
+.signup-button-pane{
+    align-items: center;
+    display: flex;
+    flex: none;
+    justify-content: center;
+    margin: 10px;
+}
+
+.signup-button{
+    background-color: lightskyblue;
+    border-radius: 12px;
+    color: white;
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+}
+
+
+/* Footer Content */
+
+.footer{
+    align-items: center;
+    background-color: #1f2937;
+    color: white;
+    display: flex;
+    justify-content: center;
 }
